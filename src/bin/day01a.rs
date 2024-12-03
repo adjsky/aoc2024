@@ -4,10 +4,7 @@ fn main() {
     let (mut left, mut right): (Vec<i32>, Vec<i32>) = INPUT
         .lines()
         .map(|l| {
-            let ns: Vec<i32> = l
-                .split_whitespace()
-                .map(|s| s.parse::<i32>().unwrap())
-                .collect();
+            let ns: Vec<i32> = l.split_whitespace().map(|s| s.parse().unwrap()).collect();
 
             (ns[0], ns[1])
         })

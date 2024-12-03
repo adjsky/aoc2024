@@ -3,7 +3,7 @@ const INPUT: &str = include_str!("../../data/day02.txt");
 fn main() {
     let n_safe = INPUT
         .lines()
-        .map(|l| l.split_whitespace().map(|s| s.parse::<i32>().unwrap()))
+        .map(|l| l.split_whitespace().map(|s| s.parse().unwrap()))
         .filter(|r| {
             let a = is_record_safe(r.clone().collect(), Order::Ascending, 0, false);
             let b = is_record_safe(r.clone().collect(), Order::Descending, 0, false);
